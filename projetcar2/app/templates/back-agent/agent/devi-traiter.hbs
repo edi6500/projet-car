@@ -1,0 +1,27 @@
+<div class="profil-client">
+  <h3>Devis traités</h3>
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th>Destination</th>
+            <th>Date de création</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each model as |quote|}}
+        {{#if (compare quote.status "===" "traité")}}
+          <tr>
+            {{!-- {{log quote.id}} --}}
+            <td>{{quote.placeStart.city}}</td>
+            <td>{{moment-format quote.dateCreation 'DD/MM/YYYY'}}</td>
+            <td>{{#link-to "back-agent.agent.devi-detail" quote.id}}<i class="fas fa-info-circle"></i>{{/link-to}}</td>
+          </tr>
+        
+        {{/if}}
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+</div>

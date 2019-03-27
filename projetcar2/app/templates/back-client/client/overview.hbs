@@ -1,0 +1,81 @@
+<div class="profil-client">
+  <h3>Vos demande de devis</h3>
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Date de création</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#each model.quotesId as |quote|}}
+      {{#if (compare quote.status "===" "attente")}}
+        
+        <tr>
+          {{!-- {{log quote.id}} --}}
+          <td>{{quote.placeEnd.city}}</td>
+          <td>{{moment-format quote.dateCreation 'DD/MM/YYYY'}}</td>
+          <td>{{#link-to "back-client.client.info-devis" quote.id}}<i class="fas fa-info-circle"></i>{{/link-to}}</td>
+        </tr>
+      
+      {{/if}}
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+
+  <h3>Propositions de devis</h3>
+
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Date de création</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#each model.quotesId as |quote|}}
+        {{#if (compare quote.status "===" "traité")}}
+            <tr>
+              {{!-- {{log quote.id}} --}}
+              <td>{{quote.placeEnd.city}}</td>
+              <td>{{moment-format quote.dateCreation 'DD/MM/YYYY'}}</td>
+              <td>{{#link-to "back-client.client.info-devis" quote.id}}<i class="fas fa-info-circle"></i>{{/link-to}}</td>
+            </tr>
+        {{/if}}
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Devis accepté</h3>
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Date de création</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#each model.quotesId as |quote|}}
+        {{#if (compare quote.status "===" "accepté")}}
+            <tr>
+              {{!-- {{log quote.id}} --}}
+              <td>{{quote.placeEnd.city}}</td>
+              <td>{{moment-format quote.dateCreation 'DD/MM/YYYY'}}</td>
+              <td>{{#link-to "back-client.client.info-devis" quote.id}}<i class="fas fa-info-circle"></i>{{/link-to}}</td>
+            </tr>
+        {{/if}}
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+{{outlet}}

@@ -1,0 +1,59 @@
+{{!-- <div class="organiserVoyage"> --}}
+  <div class="profil-client">
+    <h3 class="titleVoyage">Votre profil</h3>
+    <div class="info-profil-alone">
+      <h4>Informations personnelles :</h4>
+    </div>
+    <div class="info-profil">
+      <span class="label-devis">Nom : {{model.lastname}}</span>
+      <span class="label-devis">Prenom : {{model.firstname}}</span>
+    </div>
+    <div class="info-profil">
+      <span class="label-devis">Email : {{model.userId.email}}</span>
+      <span class="label-devis">Téléphone : {{model.phoneNumber}}</span>
+    </div>
+    <div class="info-profil-alone">
+      <span class="label-devis-sub-title">Adresse :</span>
+    </div>
+    <div class="info-profil">
+      <span class="label-devis">Rue : {{model.address.street}}</span>
+      <span class="label-devis">Numero : {{model.address.number}}</span>
+    </div>
+
+    <div class="info-profil">
+      <span class="label-devis">Code postal : {{model.address.zip}}</span>
+      <span class="label-devis">Ville : {{model.address.city}}</span>
+    </div>
+
+    <div class="info-profil-alone">
+      <span class="label-devis">Pays : {{model.address.country}}</span>
+    </div>
+    <div class="info-profil-alone">
+      <h4>Informations de la société :</h4>
+    </div>
+    <div class="info-profil">
+      <span class="label-devis">Nom : {{model.companyName}}</span>
+      <span class="label-devis">Téléphone : {{model.companyPhone}}</span>
+    </div>
+    <div class="info-profil">
+      <span class="label-devis">Numéro de TVA : {{model.tvaNumber}}</span>
+      <span class="label-devis">Iban : {{model.iban}}</span>
+    </div>
+    <div class="info-profil-alone">
+      <span class="label-devis-sub-title">Adresse :</span>
+    </div>
+    <div class="info-profil">
+      <span class="label-devis">Rue : {{model.companyAddress.street}}</span>
+      <span class="label-devis">Numero : {{model.companyAddress.number}}</span>
+    </div>
+    <div class="info-profil">
+      <span class="label-devis">Code postal : {{model.companyAddress.zip}}</span>
+      <span class="label-devis">Ville : {{model.companyAddress.city}}</span>
+    </div>
+    <div class="info-profil-alone">
+      <span class="label-devis">Pays : {{model.companyAddress.country}}</span>
+    </div>
+  </div>
+{{!-- </div> --}}
+
+{{outlet}}

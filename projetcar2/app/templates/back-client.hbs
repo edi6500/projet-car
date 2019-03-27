@@ -1,0 +1,23 @@
+<nav>
+  <div class="logo">
+    <img src="../../img/logo.png" height="80" width="180" alt="">
+  </div>
+  
+
+  <Menu @route="client" @onClick={{action "logout"}}/>
+
+</nav>
+
+<div class="back-office">
+  {{!-- <div class="container-client"> --}}
+    <div class="sidebar">
+      <ul>
+        <li><i class=" fas far fa-user"></i>{{#link-to "back-client.client.client-profil"}}Profil{{/link-to}}</li>
+        <li><i class="fas fa-clipboard-list"></i>{{#link-to "back-client.client.client-devis"}}Demander un devis{{/link-to}}</li>
+        <li><i class="fas fa-list"></i>{{#link-to "back-client.client.overview"}}Liste de devis{{/link-to}}</li>
+      </ul>
+    </div>
+  {{!-- </div> --}}
+  
+  <div class="outlet-back">{{outlet}}</div>
+</div>

@@ -1,0 +1,131 @@
+@media only screen and (min-width: 750px) {
+  
+  
+  ico {
+    color: rgb(172, 161, 161);
+    height: 15px;
+    width: 15px;
+    margin-top: 40px;
+    margin-left: 20px;
+    float: left;
+  }
+
+  .container2 {
+    margin: auto;
+    position: center;
+    display: flex;
+  }
+
+  .para1 {
+    position: center;
+    margin: auto;
+    height: 300px;
+    width: 350px;
+    color: rgb(70, 70, 70);
+  }
+
+  .para2 {
+    margin: auto;
+    height: 300px;
+    width: 350px;
+    color: rgb(70, 70, 70);
+  }
+
+  .container3 {
+    position: center;
+    display: flex;
+    margin: auto;
+  }
+
+  .para3 {
+    margin: auto;
+    height: 300px;
+    width: 350px;
+    color: rgb(70, 70, 70);
+  }
+
+  .para4 {
+    margin: auto;
+    height: 250px;
+    width: 350px;
+    color: rgb(70, 70, 70);
+  }
+
+  .container4 {
+    position: center;
+    margin: auto;
+    display: flex;
+  }
+
+  .para5 {
+    margin: auto;
+    height: 300px;
+    width: 350px;
+    color: rgb(70, 70, 70);
+  }
+
+  .para6 {
+    margin: auto;
+    height: 300px;
+    width: 350px;
+    color: rgb(70, 70, 70);
+  }
+}
+
+.discobus {
+  margin: auto;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  max-width:100%;
+  display: flex;
+  flex-direction: column;
+  p {
+    
+
+    
+    margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .photo01 img {
+    display: flex;
+    margin:20px auto;
+    max-width:100%;
+
+  }
+
+}
+
+
+.serviceTop {
+  height: auto;
+  max-width: 100%;
+  margin: auto;
+  padding: 50px;
+
+  .imageservice  img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+
+  }
+
+}
+h5{
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 70px;
+  font-size: 20px;
+  color: orange;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.fa-2x{
+  float: left;
+}
+
+
+

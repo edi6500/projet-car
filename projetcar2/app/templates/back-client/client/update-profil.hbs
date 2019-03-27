@@ -1,0 +1,81 @@
+<div class="flex" class="organiserVoyage">
+  <div class="container-devis">
+    <h3 class="titleVoyage">Votre profil</h3>
+    <div>
+      <label class="label-devis">Nom :</label>
+      {{input type="text" value=model.lastname}}
+    </div>
+    <div>
+      <label class="label-devis">Prénom :</label>
+      {{input type="text" value=model.firstname}}
+    </div>
+    <div>
+      <label class="label-devis">Email :</label>
+      {{input type="text" value=model.userId.email}}
+    </div>
+    <div>
+      <label class="label-devis">Téléphone :</label>
+      {{input type="text" value=model.phoneNumber}}
+    </div>
+    <div>
+      <label class="label-devis">Rue :</label>
+      {{input type="text" value=model.address.street}}
+    </div>
+    <div>
+      <label class="label-devis">Numéro :</label>
+      {{input type="text" value=model.address.number}}
+    </div>
+    <div>
+      <label class="label-devis">Code postal :</label>
+      {{input type="text" value=model.address.zip}}
+    </div>
+    <div>
+      <label class="label-devis">Ville :</label>
+      {{input type="text" value=model.address.city}}
+    </div>
+    <div>
+      <label class="label-devis">Pays :</label>
+      {{input type="text" value=model.address.country}}
+    </div>
+    <div>
+      <label class="label-devis">Nom d'entreprise :</label>
+      {{input type="text" value=model.companyName}}
+    </div>
+    <div>
+      <label class="label-devis">Numéro de tva :</label>
+      {{input type="text" value=model.tvaNumber}}
+    </div>
+    <div>
+      <label class="label-devis">Iban :</label>
+      {{input type="text" value=model.iban}}
+    </div>
+
+    <div>
+      <label><span class="label-devis gras">Adresse de facturation:</span></label>
+    </div>
+    <div>
+      <label class="label-devis">Rue :</label>
+      {{input type="text" value=model.companyAddress.street}}
+    </div>
+    <div>
+      <label class="label-devis">Numéro :</label>
+      {{input type="text" value=model.companyAddress.number}}
+    </div>
+    <div>
+      <label class="label-devis">Code postal :</label>
+      {{input type="text" value=model.companyAddress.zip}}
+    </div>
+    <div>
+      <label class="label-devis">Ville :</label>
+      {{input type="text" value=model.companyAddress.city}}
+    </div>
+    <div>
+      <label class="label-devis">Pays :</label>
+      {{input type="text" value=model.companyAddress.country}}
+    </div>
+    <div class="button">
+      <button onclick={{action "updateProfile"}}>Confirmer</button>
+    </div>
+  </div>
+</div>
+{{outlet}}

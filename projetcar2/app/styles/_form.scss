@@ -1,0 +1,171 @@
+.flex{
+  display: flex;
+  justify-content: center;
+}
+
+input[type=text],input[type=number],input[type=time],input[type=date],input[type=password], select, textarea,input[type=email],input[type=tel]  {
+  width: 95%; /* les emplacements des formulaires */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  resize: vertical ;
+  margin-left: 10px;
+  text-decoration: none;
+  
+}
+
+input[type="text"]:focus,
+[type="date"]:focus,
+[type="tel"]:focus,
+[type="datetime"]:focus,
+[type="email"]:focus,
+[type="number"]:focus,
+[type="search"]:focus,
+[type="time"]:focus,
+[type="url"]:focus,
+.form-style-6 textarea:focus,
+.form-style-6 select:focus{
+  box-shadow: 0 0 5px rgb(67, 95, 89);
+	color:black;
+  border: 1px solid rgb(42, 49, 48);
+  background-color: rgb(207, 200, 200);
+}
+
+.preference{
+  margin:6px 10px;
+}
+
+.country{
+  margin-left: 10px;
+}
+
+.countryChoose {
+  margin-bottom: 80px;
+  label{
+    margin-left: 10px;
+  }
+}
+.button{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+  max-width: 800px;
+}
+button { /* modifier la taille couleur.. des button*/
+	background-color:#4870c0;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:15px;
+	color: white;
+	display:inline-block; 
+	cursor:pointer;
+	
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+ /* text-shadow:0px 1px 0px #0041ce;*/
+  a{
+    color:#ffffff; 
+  }
+
+}
+button:hover {
+  background-color:rgba(160, 160, 214, 0.616);
+  
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+/* Organiser voyage */
+.organiserVoyage {
+  margin-top: 80px;
+  padding: 40px 0;
+ 
+ 
+ form{
+    margin-right: 50px;
+  }
+ label{
+   padding: 10px 0;
+   margin: 10px;
+ }
+ input{
+   padding:  10px;
+ }
+}
+/* inscription */
+#inscription{
+  
+  
+  border: 5px solid rgb(158, 144, 144);
+  box-shadow: 5px 20px #888888;
+  padding-left: 10px;
+  margin: 0 10px;
+  input{
+    width: 95%;
+  }
+}
+
+/* Devis */
+
+.titleVoyage{
+  
+  font-size: 20px;
+  justify-content: center;
+  margin: 20px 10%;
+  color: orange;
+}
+.container-devi{
+	box-shadow: 0 0 10px #555;
+
+  //padding-bottom: 10px;
+  margin: 0 auto;
+  z-index: 99;
+  max-width: 960px;
+
+   padding: 50px;
+  // padding: 20px;
+  background-color: rgb(255, 255, 255);
+}
+/* contact */
+
+.font-blanc{
+  box-shadow: 0 0 10px #555;
+
+  background-color: white;
+  margin: 0px auto;
+  height: 100%;
+  padding: 40px;
+  max-width:800px;
+}
+
+@media only screen and (min-width: 750px){
+  form{
+    width: 60%;
+  }
+
+  /* organiser voyage */
+  .titleVoyage{
+    font-size: 40px;
+    text-align: center;
+    
+  }
+  /* inscription */
+  .inscription {
+    text-align: center;
+  }
+  .organiserVoyage{
+    
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 80px auto;
+   }
+
+}

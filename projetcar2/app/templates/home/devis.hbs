@@ -1,0 +1,119 @@
+
+<div class="container-devi">
+  
+
+<h1 class="titleVoyage">Organiser un Voyage</h1>
+<div class="devisform">
+
+<div class="organiserVoyage">
+
+
+  <form onsubmit={{action "sendDevis"}}>
+    <div>
+      <h4>Informations personnelles :</h4>
+      {{input type="text"  placeholder="Nom" value=firstname required=true}}
+      {{input type="text" name="lastname" id="lastname" placeholder="Prénom" value=lastname required=true}}
+      {{input type="text" name="email" id="email" placeholder="Email" value=email required=true}}
+      {{input type="tel" name="telephone" id="telephone" placeholder="Téléphone" value=phoneNumber required=true}}  
+      {{input type="text" name="rue" placeholder="Rue" value=street required=true}}
+      {{input type="text" placeholder="N°" value=number required=true}}
+      {{input type="text" name="codePostal" placeholder="Code postal" value=zip required=true}}
+      {{input type="text" name="ville" placeholder="Ville" value=city required=true}}
+      {{input type="text" name="pays" placeholder="Pays" value=country required=true}}
+    </div>
+    <div>
+      <h4>Informations de la société :</h4>
+      {{input type="text" name="companyName" placeholder="Nom de la companie" value=companyName}}
+      {{input type="text" name="companyPhone" placeholder="Téléphone de la companie" value=companyPhone}}
+      {{input type="text" name="tva" placeholder="TVA" value=tva}}
+      {{input type="text" name="companyRue" placeholder="Rue" value=companyStreet}}
+      {{input type="text" placeholder="N°" value=companyNumber}}
+      {{input type="text" name="companyCodePostal" placeholder="Code postal" value=companyZip}}
+      {{input type="text" name="companyVille" placeholder="Ville" value=companyCity}}
+      {{input type="text" name="companyPays" placeholder="Pays" value=companyCountry}}
+      {{input type="text" name="iban" placeholder="iban" value=iban}}  
+    </div>
+    <div>
+      <h4>Détail du voyage, Départ :</h4>
+      <p for="pays">Pays de départ</p>
+      {{input type="text" name="dptCountry" id="dptCountry" value=dptCountry required=true}}
+      <p for="date">Date de départ</p>
+      {{input type="date" max="2025-06-25" min="2018-08-18" name="the_date" value=dptDate required=true}}
+      <br>
+    </div>
+    <div>
+      <p for="adress">Adresse :</p>
+      {{input type="text" name="adress" value=dptAdress required=true}}
+
+      <p>Numero :</p>
+      {{input type="text" name="number" value=dptNumber required=true}}
+
+    </div>
+    <div>
+      <p for="zip">Code postal :</p>
+      {{input type="text" name="zip" value=dptZip required=true}}
+
+      <p>Ville :</p>
+      {{input type="text" name="city" value=dptCity required=true}}
+
+    </div>
+    <div>
+      <h4>Détail du voyage, Arrivée :</h4>
+      <p for="pays">Pays d'arrivée</p>
+      {{input type="text" name="arrCountry" id="arrCountry" value=arrCountry required=true}}
+
+      <p for="date">Date d'arrivée</p>
+      {{input type="date" max="2025-06-25" min="2018-08-18" name="the_date" value=arrDate required=true}}
+
+    </div>
+    <div>
+      <p for="adress">Adresse :</p>
+      {{input type="text" name="adress" id="adress" value=arrAdress required=true}}
+
+      <p for="numero">Numero :</p>
+      {{input type="text" name="number" id="number" value=arrNumber required=true}}
+
+    </div>
+    <div>
+      <p for="zip">Code postal :</p>
+      {{input type="text" name="zip" id="zip" value=arrZip required=true}}
+
+      <p for="city">Ville :</p>
+      {{input type="text" name="city" id="city" value=arrCity required=true}}
+
+    </div>
+
+    <div>
+      <p for="numbrepassager">Nombre de passager :</p>
+      {{input type="number" name="passage" value=passagerNumber min="0" required=true}}
+      <h4>Options :</h4>
+      
+      <label for="">wc
+        <input type="checkbox" id="toilettes" name="toilettes" value="toilettes" onclick={{action "toggleCheckBox" "toilettes"}}>
+      
+      </label>wifi
+      <label for=""> <input type="checkbox" id="Wifi" name="wifi" value="wifi" onclick={{action "toggleCheckBox" "wifi"}}>
+      </label>
+      <label for="">tv
+        <input type="checkbox" id="tv" name="tv" value="tv" onclick={{action "toggleCheckBox" "tv"}}>
+      </label>
+      <label for="">remorque
+        <input type="checkbox" id="remorque" name="remorque" value="remorque" onclick={{action "toggleCheckBox" "remorque"}}>
+      </label>
+     
+      <p> Demande particulière :</p>
+      {{textarea name="msg" rows="6" cols="40" value=com}}<br>
+    </div>
+
+    <div class="button">
+      <button>
+        Envoyer
+      </button>
+    </div>
+  </form>
+</div>
+
+</div>
+</div>
+
+{{outlet}}

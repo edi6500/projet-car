@@ -1,0 +1,38 @@
+<div class="font-blanc">
+   <h3 class="contacte-title">Contact</h3>
+   <div class="contactcallcenter">  
+     <img src="../img/callcenter.png" alt="">
+  </div>
+  <div class="flex organiserVoyage">
+   
+    <form onsubmit={{action "sendMessage"}}>
+      
+      <div>
+        {{!-- <label for="name">Nom :</label> --}}
+        {{input type="text" placeholder="Nom" value=lastname}}
+      </div>
+      <div>
+        {{!-- <label for="prenom">Prenom :</label> --}}
+        {{input type="text" id="prenom" name="prenom" placeholder="Prénom" value=firstname}}
+      </div>
+      <div>
+        {{!-- <label for="mail">e-mail :</label> --}}
+        {{input type="email" id="mail" name="user_mail" placeholder="Email" value=email}}
+      </div>
+      <div>
+        {{!-- <label for="telephon">tel:</label> --}}
+        {{input type="tel" id="telephone" name="telephone" placeholder="Téléphone" value=phone}}
+      </div>
+      <div>
+        {{!-- <label for="msg">Message :</label> --}}
+        {{textarea name="msg" rows="6" placeholder="Veuillez taper votre message ici..." cols="40" value=com}}
+      </div>
+      <p>Vous pouvez nous joindre au numéro suivan:0032478607873 ou nous envoyer un<a href="mailto:cartravel346@gmail.com" style="color:blue">email</a></p>
+      <div class="button">
+        <button>
+          Envoyer
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

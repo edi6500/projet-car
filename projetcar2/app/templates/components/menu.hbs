@@ -1,0 +1,26 @@
+
+<div class="button-menu" onclick={{action "toggleMenu"}}>
+    <i class="fas fa-bars"></i>
+</div>
+
+{{#if (compare route '===' 'home')}}
+  <ul class="menu {{if isOpen "active1"}}">
+      <li>{{#link-to "home.services"}}Services{{/link-to}}</li>
+      <li>{{#link-to "home.devis"}}Demande de devis{{/link-to}}</li>
+      <li>{{#link-to "home.contact"}}Contact{{/link-to}}</li>
+      <li>{{#link-to "home.inscription"}}Inscription{{/link-to}}</li>
+      <li>{{#link-to "login"}}Log-in{{/link-to}}</li>
+  </ul>
+{{/if}}
+
+{{#if (compare route '===' 'client')}}
+    <ul class="menu {{if isOpen "active1"}}">
+      <li><button class="logout" onclick={{action "logout"}}>Log-out</button></li>
+    </ul>
+{{/if}}
+
+{{#if (compare route '===' 'agent')}}
+  <ul class="menu {{if isOpen "active1"}}">
+      <li><button class="logout" onclick={{action "logout"}}>Log-out</button></li>
+  </ul>
+{{/if}}

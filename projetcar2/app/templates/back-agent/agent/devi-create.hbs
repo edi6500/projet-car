@@ -1,0 +1,84 @@
+<div class="profil-client">
+    <h3 class="titleVoyage">Traitement du devis</h3>
+    <div class="info-profil-alone">
+      <h4>Informations de départ :</h4>
+    </div>
+
+
+    <div class="info-profil">
+      <span class="label-devis">Rue : {{model.placeStart.street}}</span> 
+      <span class="label-devis">Code postal : {{model.placeStart.number}} </span>
+    </div>
+
+    <div class="info-profil">
+      <span class="label-devis">Ville : {{model.placeStart.zip}}</span>
+      <span class="label-devis">Ville : {{model.placeStart.city}}</span>
+    </div>
+
+    <div class="info-profil-alone">
+      <span class="label-devis">Pays : {{model.placeStart.country}}</span>
+    </div>
+
+    <div class="info-profil-alone">
+      <span class="label-devis">Date : {{moment-format model.dateDeparture 'DD/MM/YYYY'}}</span> 
+    </div>
+
+    <div class="info-profil-alone">
+      <h4>Informations d'arrivée :</h4>
+    </div>
+    
+    <div class="info-profil">
+      <span class="label-devis">Rue : {{model.placeEnd.street}}</span> 
+      <span class="label-devis">Code postal : {{model.placeEnd.number}} </span>
+    </div>
+    <div class="info-profil">
+      <span class="label-devis">Ville : {{model.placeEnd.zip}}</span>
+      <span class="label-devis">Ville : {{model.placeEnd.city}}</span>
+    </div>
+    <div class="info-profil-alone">
+      <span class="label-devis">Pays : {{model.placeEnd.country}}</span>
+    </div>
+    <div class="info-profil-alone">
+      <span class="label-devis">Date : {{moment-format model.dateArrival 'DD/MM/YYYY'}}</span> 
+    </div>
+
+    <div class="info-profil-alone">
+      <h4>Informations du voyage :</h4>
+    </div>
+    <div class="info-profil-alone">
+      <span class="label-devis">Nombre de passager : {{model.nbrPassenger}}</span>
+    </div>
+    <div class="info-profil-alone">
+      <span class="label-devis">Options : {{model.options}}</span>
+    </div>
+
+    <div class="info-profil-alone">
+      <h4>Commentaire/Demande particulière :</h4>
+    </div>
+    <div class="info-profil-alone">
+      <span class="label-devis">{{model.com}}</span>
+    </div>
+</div>
+
+{{!-- <divclass="organiserVoyage"> --}}
+<form class="traitement-devis" onsubmit={{action "sendQuote"}}>
+  <div class="traitement-devis-title">
+    <h4>Données à compléter par l'agent</h4>
+  </div>
+  <label for="passager">Distance :</label>
+  {{input type="number" name="distance" placeholder="Distance en km" value=nbrKm min="0"}}
+
+  <label for="passager">Nombre d'autocars :</label>
+  {{input type="number" name="nbrCar" placeholder="Nombre de car" value=nbrCar min="0"}}
+
+  <label for="passager">Nombre de chauffeur:</label>
+  {{input type="number" name="nbrDriver" placeholder="Nombre de chauffeurs" value=nbrDriver min="0"}}
+
+  <div class="button">
+    <button>Envoyer</button>
+  </div>
+</form>
+
+  {{!-- </div> --}}
+
+{{outlet}}

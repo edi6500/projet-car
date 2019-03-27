@@ -1,0 +1,129 @@
+<div class="profil-client">
+  <h3 class="titleVoyage">Demande de devis</h3>
+  {{!-- <div class="container-client"> --}}
+    <form onsubmit={{action "sendDevis"}}>
+      <div class="info-profil-alone">
+        <h4>Détails du voyage : Départ</h4>
+      </div>
+
+      <div class="info-devis">
+        <div class="input-devis">
+          <p for="date">Date :</p>
+          {{input type="date" max="2025-06-25" min="2018-08-18" name="the_date" value=dptDate}}
+        </div>
+      </div>
+
+      <div class="info-devis">
+        <div class="input-devis">
+          <p for="adress">Rue :</p>
+          {{input type="text" name="adress" value=dptAdress}}
+        </div>
+        <div class="input-devis">
+          <p>Numero :</p>
+          {{input type="text" name="number" value=dptNumber }}
+        </div>
+      </div>
+
+      <div class="info-devis">
+        <div class="input-devis">
+          <p for="zip">Code postal :</p>
+          {{input type="text" name="zip" value=dptZip }}
+        </div>
+        <div class="input-devis">
+          <p>Ville :</p>
+          {{input type="text" name="city" value=dptCity}}
+        </div>
+      </div>
+
+      <div class="info-devis">
+        <div class="input-devis">
+          <p for="pays">Pays :</p>
+          {{input type="text" name="dptCountry" id="dptCountry" value=dptCountry}}
+        </div>
+      </div>
+
+
+      <div class="info-profil-alone">
+        <h4>Détails du voyage : Arrivée</h4>
+      </div>
+
+      <div class="info-devis">
+        <div class="input-devis">
+          <p for="date">Date :</p>
+          {{input type="date" max="2025-06-25" min="2018-08-18" name="the_date" value=arrDate}}
+        </div>
+      </div>
+
+      <div class="info-devis">
+        <div class="input-devis">
+          <p for="adress">Rue :</p>
+          {{input type="text" name="adress" value=arrAdress}}
+        </div>
+        <div class="input-devis">
+          <p>Numero :</p>
+          {{input type="text" name="number" value=arrNumber }}
+        </div>
+      </div>
+
+      <div class="info-devis">
+        <div class="input-devis">
+          <p for="zip">Code postal :</p>
+          {{input type="text" name="zip" value=arrZip }}
+        </div>
+        <div class="input-devis">
+          <p>Ville :</p>
+          {{input type="text" name="city" value=arrCity}}
+        </div>
+      </div>
+
+      <div class="info-devis">
+        <div class="input-devis">
+          <p for="pays">Pays :</p>
+          {{input type="text" name="arrCountry" id="arrCountry" value=arrCountry}}
+        </div>
+      </div>
+
+      <div class="info-profil-alone">
+        <h4>Détails du voyage : Informations</h4>
+      </div>
+      <div class="info-devis">
+        <div class="input-devis">
+          <p>Nombre de passager :</p>
+          {{input type="number" name="numbrepassager" value=passagerNumber}}
+        </div>
+      </div>
+      <div class="info-devis-checkbox">
+        <p>Options :</p>
+        <div class="checkbox-devis">
+          <label for="toilettes">wc
+            <input type="checkbox" id="toilettes" name="toilettes" value="toilettes" onclick={{action "toggleCheckBox" "toilettes"}}>
+          </label>
+          <label for="wifi">wifi<input type="checkbox" id="wifi" name="wifi" value="wifi" onclick={{action "toggleCheckBox" "wifi"}}>
+          </label>
+          <label for="tv">tv
+            <input type="checkbox" id="tv" name="tv" value="tv" onclick={{action "toggleCheckBox" "tv"}}>
+          </label>
+          <label for="remorque">remorque
+            <input type="checkbox" id="remorque" name="remorque" value="remorque" onclick={{action "toggleCheckBox" "remorque"}}>
+          </label>
+        </div>
+
+        
+        
+      </div>
+      <div class="info-devis">
+        <div class="input-devis">
+            <p> Demande particulière :</p>
+            {{textarea name="msg" rows="6" cols="40" value=com}}
+        </div>
+      </div>
+
+      <div class="button">
+        <button>
+          Envoyer
+        </button>
+      </div>
+    </form>
+    {{!-- </div> --}}
+</div>
+{{outlet}}

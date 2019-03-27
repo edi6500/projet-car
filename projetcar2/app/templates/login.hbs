@@ -1,0 +1,24 @@
+{{outlet}}
+<nav>
+  <div class="logo">
+    {{#link-to "home.accueil"}}<img src="../img/logo.png" height="80" width="180" alt="">{{/link-to}}
+  </div>
+  <Menu @route="home" />
+</nav>
+<div class="changePwd">
+  <h3 class="titleVoyage">Connexion</h3>
+  {{!-- <div class="flex organiserVoyage "> --}}
+    <form onsubmit={{action "login"}}>
+      <div>
+        {{input type="text" value=contactConfirmEmail placeholder="Email" id="email" required=true}}
+      </div>
+      <div>
+        {{input type="password" value=contactConfirmPwd placeholder="password" id="password" required=true}}
+      </div>
+      {{!-- {{#link-to "home.accueil"}}Forgot Password?{{/link-to}} --}}
+      <div class="button">
+        <button >Log-in</button>
+      </div>
+    </form>
+  {{!-- </div> --}}
+</div>

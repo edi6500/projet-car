@@ -1,0 +1,146 @@
+
+
+<div class="flex" class="organiserVoyage">
+     <div class="container-devis">
+     <h3 class="titleVoyage">Edite</h3>
+
+   <div>
+      <label> <span class="label-devis">Status:</span> attente</label>
+    </div>
+    <div>
+      
+      <hr>
+      <label><span class="label-devis gras">Adresse de départ :</span></label>
+     
+    </div>
+
+  
+     
+   
+    <div>
+      <label><span class="label-devis">Rue:</span> <input type="text"></label>     
+
+    </div>
+
+   
+     
+    <div>
+      <label><span class="label-devis">Code postal :</span><input type="number"></label>
+    </div>
+
+    <div>
+      <label><span class="label-devis">Ville : </span><input type="text"></label>
+    </div>
+
+        <div>
+      <label><span class="label-devis">Pays</span><input type="text"></label>
+
+    </div>
+
+      <div>
+      <label><span class="label-devis">Date:</span><input type="date"></label>     
+
+    </div>
+
+  
+    
+
+
+    <div>
+      <label> <span class="label-devis gras">Adresse d'arrivée:</span></label>
+    </div>
+
+    
+     <div>
+      <label><span class="label-devis">Rue :</span><input type="text"></label>
+    </div>
+
+    <div>
+       <label><span class="label-devis">Numero :</span><input type="number"></label>
+    </div>
+
+   
+
+    <div>
+      <label><span class="label-devis">Code postal :</span><input type="number"></label>
+
+    </div>
+
+    <div>
+      <label><span class="label-devis">Ville:</span><input type="text"></label>
+
+    </div>
+
+    <div>
+      <label><span class="label-devis">Pays</span><input type="text"></label>
+
+    </div>
+
+    <div>
+      <label><span class="label-devis">Date:</span>2019/5/5 </label>     
+
+    </div>
+    <hr>
+      <div>
+      <label><span class="label-devis">Nombre de passager:</span><input type="number"></label>
+    </div>
+
+    
+
+    <div>
+      <label><span class="label-devis">Option:</span></label>
+       <input type="checkbox" id="wifi"> 
+      <label   for="wifi">wifi </label>
+
+       <input type="checkbox" id="toilette"> 
+      <label   for="toilette">Toilette </label>
+
+       <input type="checkbox" id="tv"> 
+      <label   for="tv">Tv </label>
+
+       <input type="checkbox" id="remorque"> 
+      <label   for="remorque">Remorque </label>
+        
+     
+
+      
+
+    </div>
+
+  
+   
+    
+
+     
+    
+    <div class="button">
+      {{#if isTreated}}
+      <button  >
+       Accepter
+      </button>
+      
+
+       <button >
+       Refuser
+      </button>
+
+      {{/if}}
+
+       <button >
+       Editer
+      </button>
+
+       <button >
+       Supprimer
+      </button>
+
+    </div>
+
+
+
+    </div>
+
+ 
+</div>
+
+{{outlet}}

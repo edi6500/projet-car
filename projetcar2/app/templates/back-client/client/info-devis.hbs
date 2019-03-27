@@ -1,0 +1,147 @@
+{{!-- <div class="flex" class="organiserVoyage"> --}}
+  <div class="profil-client">
+    <h3 class="titleVoyage">Détail du Devis</h3>
+
+    <div class="info-profil-alone">
+      <span class="label-devis">Status : {{model.status}}</span> 
+    </div>
+    <div>
+    <hr>
+    <div class="info-profil-alone">
+      <h4>Informations de départ :</h4>
+    </div>
+
+    </div>
+
+    <div class="info-profil">
+      <span class="label-devis">Rue : {{model.placeStart.street}}</span> 
+      <span class="label-devis">Code postal : {{model.placeStart.number}} </span>
+    </div>
+
+    <div class="info-profil">
+      <span class="label-devis">Ville : {{model.placeStart.zip}}</span>
+      <span class="label-devis">Ville : {{model.placeStart.city}}</span>
+    </div>
+
+    <div class="info-profil-alone">
+      <span class="label-devis">Pays : {{model.placeStart.country}}</span>
+    </div>
+
+    <div class="info-profil-alone">
+      <span class="label-devis">Date : {{moment-format model.dateDeparture 'DD/MM/YYYY'}}</span> 
+    </div>
+
+    <div class="info-profil-alone">
+      <h4>Informations d'arrivée :</h4>
+    </div>
+    
+    <div class="info-profil">
+      <span class="label-devis">Rue : {{model.placeEnd.street}}</span> 
+      <span class="label-devis">Code postal : {{model.placeEnd.number}} </span>
+    </div>
+    <div class="info-profil">
+      <span class="label-devis">Ville : {{model.placeEnd.zip}}</span>
+      <span class="label-devis">Ville : {{model.placeEnd.city}}</span>
+    </div>
+    <div class="info-profil-alone">
+      <span class="label-devis">Pays : {{model.placeEnd.country}}</span>
+    </div>
+    <div class="info-profil-alone">
+      <span class="label-devis">Date : {{moment-format model.dateArrival 'DD/MM/YYYY'}}</span> 
+    </div>
+
+    <div class="info-profil-alone">
+      <h4>Informations du voyage :</h4>
+    </div>
+    <div class="info-profil-alone">
+      <span class="label-devis">Nombre de passager : {{model.nbrPassenger}}</span>
+    </div>
+
+    {{#if (compare model.status "===" "attente")}}
+      <div class="info-profil-alone">
+        <span class="label-devis">Options : {{model.options}}</span>
+      </div>
+    {{/if}}
+    {{#if (compare model.status "===" "traité")}}
+      <div class="info-profil">
+        <span class="label-devis">Options : {{model.options}}</span>
+        <span class="label-devis">Prix : {{model.optionsPrice}}€</span>
+      </div>
+    {{/if}}
+    {{#if (compare model.status "===" "accepté")}}
+      <div class="info-profil">
+        <span class="label-devis">Options : {{model.options}}</span>
+        <span class="label-devis">Prix : {{model.optionsPrice}}€</span>
+      </div>
+    {{/if}}
+    
+    {{#if (compare model.status "===" "traité")}}
+      <div class="info-profil">
+        <span class="label-devis">Distance : {{model.totalKm}}Km</span>
+        <span class="label-devis">Prix : {{model.totalKmPrice}}€</span>
+      </div>
+    {{/if}}
+    {{#if (compare model.status "===" "accepté")}}
+      <div class="info-profil">
+        <span class="label-devis">Distance : {{model.totalKm}}Km</span>
+        <span class="label-devis">Prix : {{model.totalKmPrice}}€</span>
+      </div>
+    {{/if}}
+
+    {{#if (compare model.status "===" "traité")}}
+      <div class="info-profil">
+        <span class="label-devis">Nombre de chauffeurs : {{model.numberDriver}}</span>
+        <span class="label-devis">Prix : {{model.numberDriverPrice}}€</span>
+      </div>
+    {{/if}}
+    {{#if (compare model.status "===" "accepté")}}
+      <div class="info-profil">
+        <span class="label-devis">Nombre de chauffeurs : {{model.numberDriver}}</span>
+        <span class="label-devis">Prix : {{model.numberDriverPrice}}€</span>
+      </div>
+    {{/if}}
+
+    {{#if (compare model.status "===" "traité")}}
+      <div class="info-profil">
+        <span class="label-devis">Nombre d'autocars : {{model.numberAutocar}}</span>
+        <span class="label-devis">Prix : {{model.numberAutocarPrice}}€</span>
+      </div>
+    {{/if}}
+    {{#if (compare model.status "===" "accepté")}}
+      <div class="info-profil">
+        <span class="label-devis">Nombre de chauffeurs : {{model.numberAutocar}}</span>
+        <span class="label-devis">Prix : {{model.numberAutocarPrice}}€</span>
+      </div>
+    {{/if}}
+
+    {{#if (compare model.status "===" "traité")}}
+      <div class="info-profil-alone">
+        <span class="label-devis">Prix total avec TVA : {{model.price}}€</span>
+      </div>
+    {{/if}}
+    {{#if (compare model.status "===" "accepté")}}
+      <div class="info-profil-alone">
+        <span class="label-devis">Prix total avec TVA : {{model.price}}€</span>
+      </div>
+    {{/if}}
+    <div class="info-profil-alone">
+      <h4>Commentaire/Demande particulière :</h4>
+    </div>
+    <div class="info-profil-alone">
+      <span class="label-devis">{{model.com}}</span>
+    </div>
+    {{#if (compare model.status "===" "traité")}}
+    <div class="button">
+      <button onclick={{action "acceptQuote"}}>
+        Accepter
+      </button>
+      <button onclick={{action "refuseQuote"}}>
+        Refuser
+      </button>
+    </div>
+    {{/if}}
+    
+  </div>
+  {{!-- </div> --}}
+
+{{outlet}}

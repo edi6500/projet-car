@@ -1,0 +1,58 @@
+.img-bus{
+  img:nth-child(2){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+  }
+  img:nth-child(1){
+    display: none;
+  }
+
+}
+.button-devis{
+  position: relative;
+
+  z-index: 5;
+  //margin: 20% 45%;
+  //padding:30px 50px;
+  
+  margin: 200px 0 0 80px; 
+}
+button:hover { 
+  color: white;
+}
+
+.button-accueil{
+  
+  background-color: #4fc7f3d1;
+  display: block;
+  margin: 450px auto -450px auto;
+}
+
+@media only screen and (min-width: 750px){
+  .img-bus{
+    img:nth-child(1){
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 4;
+      display: inline-block;
+    }
+    img:nth-child(2){
+     display: none;
+    }
+    
+    .button-accueil{
+      margin: 100px auto -100px auto;
+    }
+  
+  }
+  
+}
+
+@media only screen and (max-width: 700px){
+.button-accueil{
+  margin: 300px auto -300px auto;
+  }
+}

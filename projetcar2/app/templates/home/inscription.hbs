@@ -1,0 +1,47 @@
+
+<div class="container-devi">
+  
+
+<h3 class="titleVoyage">Inscription</h3>
+<div class="devisform">
+
+<div class="organiserVoyage">
+
+
+  <form onsubmit={{action "subscribe"}}>
+    <div>
+      <h4>Informations personnelles :</h4>
+      {{input type="text"  placeholder="Nom" value=firstname required=true}}
+      {{input type="text" name="lastname" id="lastname" placeholder="Prénom" value=lastname required=true}}
+      {{input type="text" name="email" id="email" placeholder="Email" value=email required=true}}
+      {{input type="tel" name="telephone" id="telephone" placeholder="Téléphone" value=phoneNumber required=true}}  
+      {{input type="text" name="rue" placeholder="Rue" value=street required=true}}
+      {{input type="text" placeholder="N°" value=number required=true}}
+      {{input type="text" name="codePostal" placeholder="Code postal" value=zip required=true}}
+      {{input type="text" name="ville" placeholder="Ville" value=city required=true}}
+      {{input type="text" name="pays" placeholder="Pays" value=country required=true}}
+    </div>
+    <div>
+      <h4>Informations de la société :</h4>
+      {{input type="text" name="companyName" placeholder="Nom de la companie" value=companyName}}
+      {{input type="text" name="companyPhone" placeholder="Téléphone de la companie" value=companyPhone}}
+      {{input type="text" name="tva" placeholder="TVA" value=tva}}
+      {{input type="text" name="companyRue" placeholder="Rue" value=companyStreet}}
+      {{input type="text" placeholder="N°" value=companyNumber}}
+      {{input type="text" name="companyCodePostal" placeholder="Code postal" value=companyZip}}
+      {{input type="text" name="companyVille" placeholder="Ville" value=companyCity}}
+      {{input type="text" name="companyPays" placeholder="Pays" value=companyCountry}}
+      {{input type="text" name="iban" placeholder="iban" value=iban}}  
+    </div>
+    <div class="button">
+      <button>
+        Envoyer
+      </button>
+    </div>
+  </form>
+</div>
+
+</div>
+</div>
+
+{{outlet}}
